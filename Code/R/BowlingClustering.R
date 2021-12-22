@@ -1,7 +1,6 @@
 #This script generates the four clusters for the bowlers
 
 
-setwd("/home/admin-pc/KANOE/Final_Scrape/Bowling/")
 library(cluster)
 library(ggplot2)
 

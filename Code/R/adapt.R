@@ -1,7 +1,5 @@
 #This script calculates each player's adaptation factor by looking at the category he is in from previous results.
 
-setwd("/home/admin-pc/KANOE/Final_Scrape/Bowling/Clusters/Test/")
-list.files()
 adapt = data.frame()
 str(adapt)
 adapt$Name = as.character(adapt$Name)
@@ -22,8 +20,6 @@ d20Ave = read.csv("AverageIT20Bowlers.csv")
 d20Good = read.csv("GoodIT20Bowlers.csv")
 d20Great = read.csv("BestIT20Bowlers.csv")
 
-setwd("/home/admin-pc/KANOE/Final_Scrape/Bowling/")
-list.files()
 bowlers = read.csv("twenty20careerbowling.csv")
 batters = read.csv("twenty20careerbattingandfielding.csv")
 bowlName = bowlers[1]

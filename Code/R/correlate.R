@@ -1,13 +1,10 @@
 #This script correlates the ratings difference between India and an opposition with the win/loss margin.
 #It uses the developed formula to evaluate a player and then computes the average rating for a team.
 
-setwd("/home/admin-pc/Desktop/Analysis_Clean/Training/")
 
 great_odi <- read.csv("TrainingODIBatsmen.csv")
 great_odi_bowling <- read.csv("TrainingODIBowlers.csv")
 
-
-setwd("/home/admin-pc/Desktop/Analysis_Clean/ODIMatches/India/")
 odi_runs_matches <- read.csv("ODI-Runs.csv")
 
 
@@ -31,7 +28,6 @@ odi_runs_matches <- subset(odi_runs_matches,odi_runs_matches$Against != "BAN")
 getTestRatingBatting <- function(player,year)
 {
   player = toString(player)
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Ratings/")
   battingRating <- read.csv(paste(year,"testbattingrating.csv",sep=''))
   r = battingRating[battingRating$Name==player,]
   if(nrow(r) == 0 )
@@ -53,7 +49,6 @@ getTestRatingBatting <- function(player,year)
 getTestRatingBowling <- function(player,year)
 {
   player = toString(player)
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Ratings/") 
   bowlingRating <- read.csv(paste(year,"testbowlingrating.csv",sep=''))
   r = bowlingRating[bowlingRating$Name==player,]
   if(nrow(r) == 0 )
@@ -78,7 +73,6 @@ getOdiRatingBatting <- function(player,year)
 {
 
   player = toString(player)
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Ratings/")
   battingRating <- read.csv(paste(year,"odibattingrating.csv",sep=''))
   r = battingRating[battingRating$Name == player,]
   if(nrow(r) == 0 )
@@ -104,7 +98,6 @@ getOdiRatingBowling <- function(player,year)
   
 
   player = toString(player)
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Ratings/")
   bowlingRating <- read.csv(paste(year,"odibowlingrating.csv",sep=''))
   r = bowlingRating[bowlingRating$Name == player,]
   if(nrow(r) == 0 )
@@ -130,7 +123,6 @@ getT20RatingBatting <- function(player,year)
   
 
   player = toString(player)
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Ratings/")
   battingRating <- read.csv(paste(year,"twenty20battingrating.csv",sep=''))
   r = battingRating[battingRating$Name==player,]
   
@@ -154,7 +146,6 @@ getT20RatingBatting <- function(player,year)
 
 getT20RatingBowling <- function(player,year)
 {
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Ratings/")
   bowlingRating <- read.csv(paste(year,"twenty20bowlingrating.csv",sep=''))
 
   player = toString(player)
@@ -189,7 +180,6 @@ getAdaptance <- function(player,cricketFormat)
   #Hard coding to ODI for now
   
   player = toString(player)
-  setwd("/home/admin-pc/Desktop/Analysis_Clean/Adaptance/")
   adaptance_batsmen <- read.csv("adaptance_batsmen_mod.csv")
   adaptance_bowlers <- read.csv("adaptance_bowlers_mod.csv")
   

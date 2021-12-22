@@ -59,8 +59,6 @@ testandodicore <- rbind(testcore,odicore)
 testandt20core <- rbind(testcore,t20core)
 odiandt20core <- rbind(odicore,t20core)
 
-setwd("/home/admin-pc/KANOE/Final_Scrape/Bowling/Clusters/T20/")
-
 x = intersect(t20Best$Name,testBest$Name)
 
 write.csv(x,"T20andTest.csv")

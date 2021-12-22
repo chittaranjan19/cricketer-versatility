@@ -1,9 +1,5 @@
 #This script clusters batsmen and then analyses those clusters for intersection of different categories across formats.
 
-getwd()
-setwd("/home/sreedhar/Desktop/Summer2016/KAnOE/Final_Scrape/Batting")
-list.files()
-
 make_clusters <- function(the_file_name){
   
   # Reading the filename which has statistics of IPL batsmen in a particular format
